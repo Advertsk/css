@@ -1,0 +1,237 @@
+<link rel="stylesheet" href="../css/mmc.css">
+<script src="../js/jquery.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.tabscontent .trade-size').show();
+        $('.mmcoptions .trade-size').first().show();
+       
+    });
+</script>
+<div class="module-mmc">
+    <div class="content">
+        <div class="mmcmenu">
+            <ul class="tabs" id="settingtabs">
+                <li data-tab="tradeSize">trade size</li>
+                <li data-tab="takeProfit">take profit</li>
+                <li data-tab="stopLoss">stop loss</li>
+            </ul>
+            <div class="tabscontent">
+                <ul class="tradeSize">
+                    <li><a data-method="lots"><input type="radio" name="mmctype"> lots/value/% per amm. of bal./equity/margin </a></li>
+                    <li><a data-method="percentVolatility"><input type="radio" name="mmctype"> percent volatility </a></li>
+                    <li><a data-method="fixedRisk"><input type="radio" name="mmctype"> fixed risk / fixed fractional </a></li>
+                    <li><a data-method="formula"><input type="radio" name="mmctype"> kelly/optimal/secure formula </a></li>
+                    <li><a data-method="profitRisk"><input type="radio" name="mmctype"> profit risk method  </a></li>
+                    <li><a data-method="ratio"><input type="radio" name="mmctype"> fixed/generalized ratio </a></li>
+                    <li><a data-method="target"><input type="radio" name="mmctype"> margin/leverage target </a></li>
+                    <li><a data-method="drawdown"><input type="radio" name="mmctype"> max drawdown method </a></li>
+                    <li><a data-method="maximum"><input type="radio" name="mmctype"> maximum possible</a></li>
+                </ul>
+                <ul class="takeProfit">
+                    <li><a data-method="lots"><input type="radio" name="mmctype"> lots/value/% per amm. of bal./equity/margin </a></li>
+                    <li><a data-method="percentVolatility"><input type="radio" name="mmctype"> percent volatility </a></li>
+                    <li><a data-method="fixedRisk"><input type="radio" name="mmctype"> fixed risk / fixed fractional </a></li>
+                </ul>
+                <ul class="stopLoss">
+                    <li><a data-method="lots"><input type="radio" name="mmctype"> lots/value/% per amm. of bal./equity/margin </a></li>
+                    <li><a data-method="percentVolatility"><input type="radio" name="mmctype"> percent volatility </a></li>
+                    <li><a data-method="fixedRisk"><input type="radio" name="mmctype"> fixed risk / fixed fractional </a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="mmcoptions">
+            <div class="scrollbar"><div class="track"><div class="thumb"><div class="end"></div></div></div></div>
+            <div class="viewport">
+                <div class="overview">
+                    <fieldset class="always results">
+                            <label>trade size</label>
+                            <label>take profit</label>
+                            <label>stop loss</label>                            
+                            <div class="input-wrap"><input class="trade-size spinner"></div>
+                            <div class="input-wrap"><input class="take-profit spinner"></div>
+                            <div class="input-wrap"><input class="stop-loss spinner"></div>
+                            <a class="btn btn-set plastic">SET</a>
+                    </fieldset>
+                    <fieldset class="always">
+                        <legend>method</legend>
+                        <div class="method"></div>
+                    </fieldset>
+                    
+                    <fieldset class="lots">
+                        <legend>Parameters</legend>
+                        <div class="options main">
+                            <div class="choose pull-left half">
+                                choose:
+                                <div><input type="radio" name="mmc-lots-choose" value="lots"><label>lots</label></div>
+                                <div><input type="radio" name="mmc-lots-choose" value="value"><label>value</label></div>
+                                <div><input type="radio" name="mmc-lots-choose" value="percentage"><label>percentage</label></div>
+                                <div><div class="input-wrap"><input class="value spinner"></div></div>
+                            </div>
+                            <div class="pull-left half">
+                                <div class="per">
+                                    per
+                                    <input type="radio" name="mmc-lots-per" value="max"><label>maximum available</label>
+                                    <input type="radio" name="mmc-lots-per" value="fixed"><label>fixed</label>
+                                    <div class="input-wrap"><input class="fixed-value spinner"></div>
+                                </div>
+                                <div class="ammount">
+                                    ammount of
+                                    <input type="radio" name="mmc-lots-ammount" value="balance"><label>balance</label>
+                                    <input type="radio" name="mmc-lots-ammount" value="equity"><label>equity</label>
+                                    <input type="radio" name="mmc-lots-ammount" value="freeMargin"><label>free margin</label>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="percentVolatility">
+                        <legend>Parameters</legend>
+                        <div class="options main">
+                          <div class="volatility">
+                            volatility<br>
+                            <div class="input-wrap"><input class="volatility spinner"></div>
+                            % of
+                            <input type="radio" name="mmc-percent-volatility-of" value="balance"><label>balance</label>
+                            <input type="radio" name="mmc-percent-volatility-of" value="equity"><label>equity</label>
+                            <input type="radio" name="mmc-percent-volatility-of" value="freeMargin"><label>free margin</label>
+                          </div>
+                          <div class="period">
+                            atr period:
+                            <div class="input-wrap"><input class="period spinner"></div>
+                          </div>
+                          <div class="timeframe">
+                            atr timeframe:
+                            <div class="input-wrap"><input class="timeframe spinner"></div>
+                          </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="fixedRisk">
+                        <legend>Parameters</legend>
+                        <div class="options main">
+                            <div class="risk">
+                                risk<br>
+                                <div class="input-wrap"><input class="risk spinner"></div>
+                                % of
+                                <input type="radio" name="mmc-fixed-risk-of" value="balance"><label>balance</label>
+                                <input type="radio" name="mmc-fixed-risk-of" value="equity"><label>equity</label>
+                                <input type="radio" name="mmc-fixed-risk-of" value="freeMargin"><label>free margin</label>
+                          </div>
+                          <div class="stopLoss">
+                            <label class="plastic">stop loss</label><div class="input-wrap"><input class="stop-loss spinner"></div>
+                          </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="formula">
+                        <div class="options main">
+                            <legend>Parameters</legend>
+                            <div><input type="radio" name="mmc-formula-type" value="kelly"><label>kelly f</label><div class="input-wrap"><input class="kelly-value spinner"></div> %</div>
+                            <div><input type="radio" name="mmc-formula-type" value="optimal"><label>optimal f</label><div class="input-wrap"><input class="optimal-value spinner"></div> %</div>
+                            <div><input type="radio" name="mmc-formula-type" value="secure"><label>secure f</label><div class="input-wrap"><input class="secure-value spinner"></div> %</div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="profitRisk">
+                        <legend>Parameters</legend>
+                        <div class="options main">
+                            <div>
+                                risk <div class="input-wrap"><input class="profit-risk spinner"></div> % of profits
+                            </div>
+                            <div>
+                                risk <div class="input-wrap"><input class="balance-risk spinner"></div> % of initial balance
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="ratio">
+                        <legend>Parameters</legend>
+                        <div class="options main">
+                            <div class="ratio-fixed">
+                                <div>
+                                    <input type="radio" name="mmc-ratio-type" value="fixed"><label>fixed</label>
+                                    delta: <div class="input-wrap"><input class="delta spinner"></div>
+                                </div>
+                                <div>
+                                    delta fraction: <div class="input-wrap"><input class="delta-fraction spinner"></div>
+                                </div>
+                                <div>
+                                    initial lots: <div class="input-wrap"><input class="initial-lots spinner"></div>
+                                </div>
+                            </div>
+                            <div class="ratio-generalized">
+                                <div>
+                                    <input type="radio" name="mmc-ratio-type" value="generalized"><label>generalized</label>
+                                </div>
+                                <div>
+                                    fraction: <div class="input-wrap"><input class="fraction spinner"></div>
+                                </div>
+                                <div>
+                                    exponent: <div class="input-wrap"><input class="exponent spinner"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="target">
+                        <legend>Parameters</legend>
+                        <div class="options main">
+                            <div class="pull-left half">
+                                <div><input type="radio" name="mmc-target-type" value="margin"><label>margin target</label></div>
+                                <div><div class="input-wrap"><input class="equity spinner"></div> % of equity</div>
+                            </div>
+                            <div class="pull-left half">
+                                <div><input type="radio" name="mmc-target-type" value="leverage"><label>leverage target</label></div>
+                                <div><div class="input-wrap"><input class="leverage spinner"></div> to 1 leverage</div>
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="drawdown">
+                        <legend>Parameters</legend>
+                        <div class="options main">
+                            <div>
+                                <div class="input-wrap"><input class="drawdown spinner"></div> % of drawdown
+                            </div>
+                        </div>
+                    </fieldset>
+                    <fieldset class="maximum">
+                        <legend>Parameters</legend>
+                        <div class="options main">
+                        </div>
+                    </fieldset>
+
+
+
+
+                    <fieldset class="always">
+                        <legend>info</legend>
+                        <div class="info"></div>
+                    </fieldset>
+                    <fieldset class="always position">
+                        <legend>position</legend>
+                        <table>
+                             <tr>
+                                <th>cash risk:</th>
+                                <td class="cashRisk"></td>
+                                <th>balance:</th>
+                                <td class="balance"></td>
+                             </tr>
+                             <tr>
+                                <th> pip value per lot: </th>
+                                <td class="pipPerLot"></td>
+                                <th> equity: </th>
+                                <td class="equity"></td>
+                             </tr>
+                             <tr>
+                                <th> s/l risk per lot: </th>
+                                <td class="riskPerLot"></td>
+                                <th> free margin: </th>
+                                <td class="freeMargin"></td>
+                             </tr>
+                             <tr>
+                                <th> lot size: </th>
+                                <td class="lotSize"></td>
+                                <th></th>
+                                <td></td>
+                             </tr>
+                        </table>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

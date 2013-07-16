@@ -1,0 +1,82 @@
+<link rel="stylesheet" href="../css/aoss.css">
+<div class="module-aoss">
+    <fieldset>
+        <legend>save</legend>
+        <label>strategy:</label>
+        <select class="select-strategy"></select>
+        <a class="load-strategy-btn plastic">load</a>
+        <a class="save-strategy-btn plastic">save</a>
+
+        <div class="clear"/>
+        <label>new</label>
+
+        <div class="input-wrap"><input class="strategy-name"></div>
+        <a class="new-strategy-btn plastic">create</a>
+    </fieldset>
+    <ul class="bracket-list tabs">
+        <li>bracket 1</li>
+        <li>bracket 2</li>
+        <li>bracket 3</li>
+    </ul>
+    <div class="dense">
+        <div class="mmc-buttons">
+            <a class="trade-size-btn plastic">trade size</a>
+            <a class="take-profit-btn plastic">take profit</a>
+            <a class="stop-loss-btn plastic">stop loss</a>
+            <a class="trail-stop-btn plastic">trail stop</a>
+            <div class="nl"></div>
+            <div class="input-wrap"><input class="trail-stop spinner"></div>
+            <div class="input-wrap"><input class="trade-size spinner"></div>
+            <div class="input-wrap"><input class="take-profit spinner"></div>
+            <div class="input-wrap"><input class="stop-loss spinner"></div>
+        </div>
+        <fieldset>
+            <legend>trailing stop</legend>
+            <label>trailing stop</label>
+            <label>frequency</label>
+            <label>trigger after</label>
+            <div class="nl"></div>
+            <div class="input-wrap"><input class="trail-stop-stop spinner"></div>
+            <div class="input-wrap"><input class="trail-stop-freq spinner"></div>
+            <div class="input-wrap"><input class="trail-stop-trigger spinner"></div>
+        </fieldset>
+        <fieldset>
+            <legend>breakevent</legend>
+            <label>trigger after:</label>
+            <div class="input-wrap"><input class="break-trigger spinner"></div>
+            <label>after +/-:</label>
+            <div class="input-wrap"><input class="break-after spinner"></div>
+            <div class="nl"></div>
+            <label class="break-value">1.23456</label>
+            <input type="radio" class="break-type-amount" name="break-type" value="amount"> amount
+            <input type="radio" class="break-type-pips" name="break-type" value="pips"> pips
+            <input type=checkbox class="break-reverse"> reverse
+        </fieldset>
+        <div class="scale-wrapper">
+            <div class="scrollbar">
+                <div class="track">
+                    <div class="thumb">
+                        <div class="end"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="viewport">
+                <div class="overview scale">
+                    <!-- template aoss-scales.htm -->
+                </div>
+            </div>
+        </div>
+        <fieldset class="actions">
+            <legend>actions</legend>
+            <a class="add-bracket-btn">add bracket</a>
+            <a class="remove-bracket-btn">remove bracket</a>
+            <div class="nl"></div>
+            <a class="set-op-btn">set to orderpanel</a>
+        </fieldset>
+    </div>
+    <fieldset>
+        <legend>custom conditions</legend>
+        <select class="condition-entry"></select>
+        <select class="condition-exit"></select>
+    </fieldset>
+</div>

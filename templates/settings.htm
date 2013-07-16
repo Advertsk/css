@@ -1,0 +1,225 @@
+<link rel="stylesheet" href="../css/settings.css">
+<script src="../js/jquery.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('.tabscontent .dealingrst').show();
+        $('.settingsoptions .dealingrst').first().show();
+        $('.tabs li').each(function () {
+            $(this).click(function () {
+                $('.settingsoptions fieldset').hide();
+                $('.settingsoptions fieldset.' + $(this).attr('class')).first().show();
+                $('.tabs li.active').removeClass('active');
+                $('.tabscontent ul').hide();
+                $(this).addClass('active');
+                $("." + $(this).attr('class').substr(0, $(this).attr('class').indexOf(' ')), ".tabscontent").show();
+                $(".settingsoptions").tinyscrollbar().tinyscrollbar_update();
+            });
+        });
+        $('.tabscontent a').each(function () {
+            $(this).click(function () {
+                $('.settingsoptions fieldset').hide();
+                $("." + $(this).attr('class') + '.' + $(this).closest('ul').attr('class')).show();
+                $(".settingsoptions").tinyscrollbar().tinyscrollbar_update();
+            });
+        });
+    });
+    var settings = [
+        {
+            "id":"dealingrst",
+            "label":"parameters",
+            "options":{
+                "default view":{
+                    "table":{
+                        "type":"radio",
+                        "value":false
+                    },
+                    "standard":{
+                        "type":"radio",
+                        "value":false
+                    },
+                    "compact":{
+                        "type":"radio",
+                        "value":false
+                    },
+                    "extended":{
+                        "type":"radio",
+                        "value":false
+                    }
+                },
+                "order panel":{
+                    "numberOfOrderPanels":{
+                        "type":"text",
+                        "label":"number of order panels",
+                        "value":0
+                    },
+                    "openMenusOnMouseOver":{
+                        "type":"checkbox",
+                        "label":"open menus on mouse over",
+                        "value":false
+                    },
+                    "save":{
+                        "set":{
+                            "options":[
+                                {"label":"select set", "value":null}
+                            ],
+                            "selected":0
+                        }
+                    }
+                }
+            }
+        }
+    ];
+</script>
+<div class="module-settings">
+    <div class="content">
+        <div class="settingsmenu">
+            <ul class="tabs" id="settingtabs">
+                <li class="dealingrst">dealing rst.</li>
+                <li class="accounts">accounts</li>
+                <li class="alerts">alerts</li>
+                <li class="openedpos">opened pos.</li>
+                <li class="pendingord">pending ord.</li>
+                <li class="closedtrad">closed trad.</li>
+                <li class="layouts">layouts</li>
+                <li class="trading">trading</li>
+            </ul>
+            <div class="tabscontent">
+                <ul class="dealingrst">
+                    <li><a class="defaultview">default view</a></li>
+                    <li><a class="orderpanel">order panel</a></li>
+                    <li><a class="othersettings">other settings</a></li>
+                </ul>
+                <ul class="accounts">
+                    <li><a class="visiblecolumns">visible columns</a></li>
+                </ul>
+                <ul class="alerts">
+                    <li><a class="visiblecolumns">visible columns</a></li>
+                </ul>
+                <ul class="openedpos">
+                    <li><a class="visiblecolumns">visible columns</a></li>
+                    <li><a class="menus">menus</a></li>
+                </ul>
+                <ul class="pendingord">
+                    <li><a class="visiblecolumns">visible columns</a></li>
+                </ul>
+                <ul class="closedtrad">
+                    <li><a class="visiblecolumns">visible columns</a></li>
+                </ul>
+                <ul class="layouts">
+                    <li><a class="colorset">colorset</a></li>
+                    <li><a class="othersettings">other settings</a></li>
+                </ul>
+                <ul class="trading">
+                    <li><a class="set">set</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="settingsoptions">
+            <div class="scrollbar"><div class="track"><div class="thumb"><div class="end"></div></div></div></div>
+            <div class="viewport">
+                <div class="overview">
+                    <fieldset class="dealingrst defaultview">
+                        <legend>Parameters</legend>
+                        <div class="options main">
+                            <span><input type="radio" name="defaultview" value="table" id="table"><label
+                                    for="table">table</label></span>
+                            <span><input type="radio" name="defaultview" value="standard" id="standard"><label for="standard">standard</label></span>
+                            <span><input type="radio" name="defaultview" value="compact" id="compact"><label for="compact">compact</label></span>
+                            <span><input type="radio" name="defaultview" value="extended" id="extended"><label for="extended">extended</label></span>
+                        </div>
+                    </fieldset>
+                    <fieldset class="dealingrst orderpanel">
+                        <legend>Parameters</legend>
+                        <div class="options main">
+                            <div>
+                                <label>number of order panels</label><input type="text" class="numeric">
+                            </div>
+                            <div>
+                                <input type="checkbox" name="openMenusOnMouseOver" id="openMenusOnMouseOver"><label
+                                    for="openMenusOnMouseOver">open menus on mouse over</label>
+                            </div>
+                            <fieldset class="dealingrst orderpanel save">
+                                <legend>save</legend>
+                            </fieldset>
+                            <fieldset class="dealingrst orderpanel symbols">
+                                <legend>symbols</legend>
+                                <div class="options">
+                                    <ul>
+                                        <li><input type="checkbox" name="eurusd" id="eurusd"/>
+                                            <label for="eurusd">EUR/USD</label></li>
+                                        <li><input type="checkbox" name="usdjpy" id="usdjpy"/>
+                                            <label for="usdjpy">USD/JPY</label></li>
+                                        <li><input type="checkbox" name="eurgbp" id="eurgbp"/>
+                                            <label for="eurgbp">EUR/GBP</label></li>
+                                        <li><input type="checkbox" name="euraud" id="euraud"/>
+                                            <label for="euraud">EUR/AUD</label></li>
+                                        <li><input type="checkbox" name="usdchf" id="usdchf"/>
+                                            <label for="usdchf">USD/CHF</label></li>
+                                        <li><input type="checkbox" name="chfjpy" id="chfjpy"/>
+                                            <label for="chfjpy">CHF/JPY</label></li>
+                                        <li><input type="checkbox" name="gbpchf" id="gbpchf"/>
+                                            <label for="gbpchf">GBP/CHF</label></li>
+                                    </ul>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </fieldset>
+                    <fieldset class="dealingrst othersettings">
+                        <legend>Parameters</legend>
+                        <div class="options main">
+                            <ul>
+                                <li><input type="checkbox" name="showSymbolSetsOnThePanel" id="showSymbolSetsOnThePanel"/>
+                                    <label for="showSymbolSetsOnThePanel">show symbol sets on the panel</label></li>
+                            </ul>
+                        </div>
+                    </fieldset>
+                    <fieldset class="accounts visiblecolumns">
+                        <legend>columns</legend>
+                        <div class="options main">
+                            <ul>
+                                <li><input type="checkbox" name="visiblecolumnsaction" id="visiblecolumnsaction" value="_action"/>
+                                    <label for="visiblecolumnsaction">action</label></li>
+                                <li><input type="checkbox" name="visiblecolumnsticket" id="visiblecolumnsticket" value="0"/>
+                                    <label for="visiblecolumnsticket">ticket</label></li>
+                                <li><input type="checkbox" name="visiblecolumnsaccount" id="visiblecolumnsaccount" value="1" />
+                                    <label for="visiblecolumnsaccount">account</label></li>
+                                <li><input type="checkbox" name="visiblecolumnsbalance" id="visiblecolumnsbalance" value="2" />
+                                    <label for="visiblecolumnsbalance">balance</label></li>
+                                <li><input type="checkbox" name="visiblecolumnsequity" id="visiblecolumnsequity" value="equity" />
+                                    <label for="visiblecolumnsequity">equity</label></li>
+                                <li><input type="checkbox" name="visiblecolumnsnetpl" id="visiblecolumnsnetpl" value="netpl"/>
+                                    <label for="visiblecolumnsnetpl">netpl</label></li>
+                                <li><input type="checkbox" name="visiblecolumnsswap" id="visiblecolumnsswap" value="swap"/>
+                                    <label for="visiblecolumnsswap">swap</label></li>
+                            </ul>
+                        </div>
+                    </fieldset>
+                    <fieldset class="alerts visiblecolumns">
+                        <legend>columns</legend>
+                        <div class="options main">
+                            <ul>
+                                <li><input type="checkbox" name="visiblecolumnsaction" id="visiblecolumnsaction"/>
+                                    <label for="visiblecolumnsaction">action</label></li>
+                                <li><input type="checkbox" name="visiblecolumnsticket" id="visiblecolumnsticket"/>
+                                    <label for="visiblecolumnsticket">ticket</label></li>
+                                <li><input type="checkbox" name="visiblecolumnssymbolsaccount" id="visiblecolumnssymbolsaccount"/>
+                                    <label for="visiblecolumnssymbolsaccount">symbolsaccount</label></li>
+                                <li><input type="checkbox" name="visiblecolumnscondition" id="visiblecolumnscondition"/>
+                                    <label for="visiblecolumnscondition">condition</label></li>
+                                <li><input type="checkbox" name="visiblecolumnsvalue" id="visiblecolumnsvalue"/>
+                                    <label for="visiblecolumnsvalue">value</label></li>
+                                <li><input type="checkbox" name="visiblecolumnsaction" id="visiblecolumnsaction"/>
+                                    <label for="visiblecolumnsaction">action</label></li>
+                                <li><input type="checkbox" name="visiblecolumnssource" id="visiblecolumnssource"/>
+                                    <label for="visiblecolumnssource">source</label></li>
+                            </ul>
+                        </div>
+                    </fieldset>
+                    <fieldset class="openedpos visiblecolumns"><legend>columns</legend><div class="options main"></div></fieldset>
+                    <fieldset class="pendingord visiblecolumns"><legend>columns</legend><div class="options main"></div></fieldset>
+                    <fieldset class="closedtrad visiblecolumns"><legend>columns</legend><div class="options main"></div></fieldset>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

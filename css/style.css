@@ -1,0 +1,343 @@
+.container.layout-horizontal > .content > div{
+  float: left;
+}
+
+.container.layout-vertical > .content > div{
+  float: none;
+}
+
+.dockScreen{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: red;
+}
+
+.dockSelectorWrapper{
+  position: absolute;
+}
+
+.dockSelector{
+  position: absolute;
+  width: 300px;
+  height: 170px;
+  display: none;
+  z-index: 9000;
+}
+
+.dockButton{
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  background: url(../img/dock.png) no-repeat;
+
+    -webkit-box-shadow: 3px 3px 8px rgba(50, 50, 50, 0.34);
+    -moz-box-shadow:    3px 3px 8px rgba(50, 50, 50, 0.34);
+    box-shadow:         3px 3px 8px rgba(50, 50, 50, 0.34);
+}
+
+.dockButton.dockTop{
+  left: 125px;
+  top: 0px;
+    background-position: -64px 0;
+}
+
+.dockButton.dockLeft{
+  left:65px;
+  top: 60px;
+    background-position: -32px 0;
+}
+
+.dockButton.dockRight{
+  left: 185px;
+  top: 60px;
+    background-position: 0 0;
+}
+
+.dockButton.dockBottom{
+  left: 125px;
+  top: 120px;
+    background-position: -96px 0;
+}
+
+.dockButton.dockScreenTop{
+    background-position: -192px 0;
+}
+.dockButton.dockScreenRight{
+    background-position: -128px 0;
+}
+.dockButton.dockScreenBottom{
+    background-position: -224px 0;
+}
+.dockButton.dockScreenLeft{
+    background-position: -160px 0;
+}
+
+/** ikony **/
+i,.icon{
+  display: inline-block;
+  background-image: url("../img/ikony2.png");
+  background-repeat: no-repeat;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  vertical-align: middle;
+}
+.header-icon-gray{
+    width: 17px;
+    height: 17px;
+    background: url('../img/header_icons.png') no-repeat;
+    display: block;
+    float: left;
+    display: inline-block;
+}
+.icon-gray{
+    width: 15px;
+    height: 16px;
+    background: url('../img/ikony2.png') no-repeat;
+    display: inline-block;
+}
+.icon-wrench2{
+    background-position: -149px 0px;
+}
+.icon-info2{
+    background-position: -251px -1px;
+}
+.icon-close2{
+    background-position: 0px 0px;
+}
+.icon-settings2{
+    background-position: 0 0;
+}
+.icon-settings2:active{
+    background-position: 0 -17px;
+}
+.icon-save2{
+    background-position: -18px 0;
+}
+.icon-save2:active{
+    background-position: -18px -17px;
+}
+.icon-clear2{
+    margin-top: 1px;
+    background-position: -36px 0;
+}
+.icon-clear2:active{
+    background-position: -36px -17px;
+}
+.icon-expand2{
+    width: 38px;
+    height: 17px;
+    background-position: -115px -69px;
+}
+.icon-expand2:hover{
+    width: 38px;
+    height: 17px;
+    background-position: -77px -69px;
+}
+
+.icon-collapse2{
+    width: 38px;
+    height: 17px;
+    background-position: -38px -70px;
+}
+.icon-collapse2:hover{
+    width: 38px;
+    height: 17px;
+    background-position: 0px -69px;
+}
+
+.icon-settings{
+  background-position: -85px 0px;
+}
+
+.icon-settings:hover{
+  background-position: -104px 0px;
+}
+
+.icon-save{
+  background-position: 0px 0px;
+}
+
+.icon-save:hover{
+  background-position: -21px 0px;
+}
+
+.icon-paste{
+  background-position: -43px 0px;
+}
+
+.icon-paste:hover{
+  background-position: -64px 0px;
+}
+
+.icon-info{
+  background-position: -166px 0px;
+}
+
+.icon-wrench{
+  background-position: -125px 0px;
+}
+
+.icon-wrench:hover{
+  background-position: -144px 0px;
+}
+
+.icon-expand{
+  width: 33px;
+  background-position: -195px -2px;
+}
+
+.icon-collapse{
+    width: 38px;
+    background-position: -38px -69px;
+}
+
+.icon-expand:hover{
+  background-position: -230px -2px;
+}
+
+.icon-collapse:hover{
+  background-position: 0px -69px;
+}
+
+.icon-close{
+    background: url('../img/ikony2.png') no-repeat;
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    background-position: -274px -7px;
+}
+.icon-close:hover{
+    background-position: -284px -7px;
+}
+
+.noSelect { user-select: none; -o-user-select: none; -moz-user-select: none; -khtml-user-select: none; -webkit-user-select: none; }
+
+
+/** tab pri tahani **/
+.floatingTab{
+  position: absolute;
+  width: 300px;
+  height: 200px;
+  top: 30px;
+  left: -1px;
+  background-color: #e5e5e5;
+    border:1px solid #c8c8c8;
+  /*opacity: 0.4;
+  filter: alpha(opacity=40);*/
+}
+
+/** menu **/
+
+.menu ul {
+  list-style-type: none;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  z-index: 899;
+  clear: both;
+    background: #ffffff;
+
+}
+.moduleWrapperMenu.menu ul{
+    z-index: 900;
+}
+.menu > ul > li ul{
+    border: 1px solid #cecece;
+}
+
+.menu ul > li {
+  float: left;
+}
+.menu ul ul {
+  display: none;
+  position: absolute;
+}
+.menu ul li a {
+  display: block;
+  padding: 1px 6px 1px;
+    cursor: pointer;
+    color: #828282;
+    border-right: #ccc;
+    line-height: 18px;
+    white-space: nowrap;
+}
+.menu ul li a:hover {
+    background: #dadada; /* Old browsers */
+    background: -moz-linear-gradient(top,  #dadada 0%, #ffffff 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#dadada), color-stop(100%,#ffffff)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #dadada 0%,#ffffff 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #dadada 0%,#ffffff 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #dadada 0%,#ffffff 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #dadada 0%,#ffffff 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dadada', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+
+}
+.menu li:hover > ul {
+  display: block;
+}
+.menu li > ul > li:hover >ul{
+  display: block;
+  left: 100%;
+  margin-top: -20px;
+}
+.menu li ul li {
+  float: none;
+}
+
+/* Level 2 */
+.menu > ul > li ul > li{
+    background-color: white;
+    border-bottom: 1px solid #dedede;
+    min-height: 18px;
+}
+.menu > ul > li ul > li.B-label{
+    height: 16px;
+    padding-top: 2px;
+}
+.menu > ul > li ul > li:last-child{
+    background-color: white;
+    border-bottom: 0;
+}
+
+.menu > ul > li ul > li input,
+.menu > ul > li ul > li input[type="text"]{
+    padding-top: 3px;
+    height: 9px;
+    margin-top: 2px;
+    padding-left: 4px;
+}
+
+/** obecne **/
+.no-cell-border > td{
+  border:none !important;
+}
+
+.container.layout-grid > .content{
+  overflow: auto;
+}
+.container.layout-grid > .content > .moduleWrapper {
+  float: left;
+    margin: 4px 0 4px 4px;
+}
+
+.pull-right{
+  float: right;
+  text-align: right;
+}
+
+.pull-left{
+  float: left;
+  text-align: left;
+}
+
+.half{
+  width: 50%;
+}
+
+.clear{
+  float: none;
+  clear: both;
+}
+

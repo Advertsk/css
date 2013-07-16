@@ -1,0 +1,30 @@
+oki, server je biosdesign.no-ip.org
+https://biosdesign.no-ip.org/svn/atc_css/
+user: denis
+heslo: 777denis456
+treba spravit
+templates/mmc.htm
+css/mmc.css
+vzor je na stranjke http://atcproject.simply9.sk/mmc/#
+musi to byt navlas rovnake v IE9 a 10, a minimalne velmo podobne v ie8
+mozes sa inspirovat css v orderpanel.css a aoss.css
+pozriem sa na to, ale zatial ma nepripojilo. pisuzivam tortoise, pise ze host je validny, ale nenasiel data..
+ako vravim, inspiruj sa ostatnymi modulmi
+do html si mozes hore linknut css subor
+my si to potom zmazeme
+ale ako vravim, musi to byt na pixelik presne :)
+klient je dost narocny
+nevezme nam to pokial to nebude navlas rovnake
+co sa tyka panelov trade size, take profit, stop loss, su spravene v module aoss.htm
+takze staci kopirovat..
+oki tak nic :) daj vediet ked nieco budes mat
+staci commitnut svn, ja si to pozriem
+no a este niecohore to okno akoze zavriet a title a tak to vobec neries
+to vykresluje nadradena aplikacia
+
+modul aoss je hotovy, zobrazuje sa to rovnako ako mmc
+takze si pozri strukturu a chod podla toho
+
+
+http://atcproject.simply9.sk/mmc/
+login: atcbrokers@43
