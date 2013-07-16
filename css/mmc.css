@@ -80,16 +80,19 @@
 .module-mmc .content .mmcmenu ul.tabs li{
 
 
-    display: inline-block;
+    display: inline;
     width: 55px;
     margin:0; padding: 0;
 
+    
+    border-radius: 6px 6px 0 0;
     -webkit-border-top-left-radius: 6px;
     -webkit-border-top-right-radius: 6px;
     -moz-border-radius-topleft: 6px;
     -moz-border-radius-topright: 6px;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
+    border-radius: 6px 6px 0 0;
     border:1px solid #C9C9C9;
 
     background: #efefef; /* Old browsers */
@@ -107,6 +110,14 @@
     cursor: pointer;
     border-bottom: 0;
 }
+
+.module-mmc .content .mmcmenu ul.tabs li:hover,
+.module-mmc .content .mmcmenu ul.tabs li.active{
+border:1px solid red;
+    background: #F0F0F0;
+}
+
+
 .module-mmc .mmcoptions .options label{
     float: left;
 }
@@ -114,10 +125,7 @@
     width: 50px;
     float: left;
 }
-.module-mmc .content .mmcmenu ul.tabs li:hover,
-.module-mmc .content .mmcmenu ul.tabs li.active{
-    background: #F0F0F0;
-}
+
 
 .module-mmc .tabscontent ul,
 .module-mmc .mmcoptions .options ul{
