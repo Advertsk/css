@@ -1,0 +1,237 @@
+/*
+ * file: mmc.css
+ * author: 
+ * copyright: (C) 2013
+ * description: custom elements for money management calculator window
+ */
+
+/* - - - money management calculator - - - */
+
+/* mmc body elements */
+div.mmc_leftBody,
+div.mmc_rightBody {
+   display: inline-block;
+   vertical-align: top;
+   width: 235px;
+}
+
+div.mmc_leftBody {
+   margin-top: 1px;
+}
+
+   div.mmc_rightBody fieldset {
+      margin-left: 0;
+   }
+
+ul.mmc_list_of_methods {
+   list-style-type: none;
+   margin: 0 2px 0 0;
+   border: 1px solid #C7C7C7;
+   border-bottom: 0;
+}
+
+   ul.mmc_list_of_methods li {
+      height: 17px;
+      padding: 3px 0 0 5px;
+      background: #FFFFFF;
+      border-bottom: 1px solid #C7C7C7;
+   }
+   
+      ul.mmc_list_of_methods li.darker {
+         background: #F9F9F9;
+      }
+      
+div.mmc_actions {
+   display: inline-block;
+   width: 183px;
+}
+
+fieldset.mmc_fieldset_actions {
+   margin-top: 2px;
+   padding-top: 2px;
+}
+
+/* fieldset method name */
+fieldset.mmc_method_name > div {
+   margin: 2px 0 0 7px;
+   font-size: 10px;
+   color: #585858;
+}
+
+/* fieldset info */
+fieldset.mmc_info > p {
+   padding: 2px 5px 3px 7px;
+   line-height: 12px;
+   font-size: 10px;
+   color: #585858;
+}
+
+/* fieldset position */
+fieldset.mmc_position > table {
+   margin: 0 0 0 7px;
+   font-size: 10px;
+   border-collapse: collapse;
+}
+
+fieldset.mmc_position > table tr {
+   height: 12px;
+   line-height: 12px;
+}
+
+   fieldset.mmc_position > table tr th {
+      width: 75px;
+      text-align: left;
+      font-weight: normal;
+      color: #585858;
+   }
+   
+   fieldset.mmc_position > table tr td {
+      width: 32px;
+      text-align: left;
+   }
+   
+/* fieldset parameters */
+fieldset.mmc_parameters div.bar {
+   display: inline-block;
+   vertical-align: top;
+   width: 104px;
+   margin: 0 0 0 7px;
+}
+
+   fieldset.mmc_parameters span.plainText {
+      font-size: 10px;
+      color: #585858;
+   }
+
+   /* custom sections */
+   div.mmc_parameters_custom_section2 {
+      margin-top: 3px;
+   }
+
+   div.mmc_parameters_custom_section4 {
+      position: absolute;
+      top: 30px;
+   }
+
+   div.mmc_parameters_custom_section5 {
+      position: absolute;
+      top: 98px;
+   }
+
+   div.mmc_parameters_custom_section6 {
+      position: absolute;
+      top: 98px;
+   }
+
+   div.mmc_parameters_custom_section7 {
+      position: absolute;
+      top: 38px;
+      left: 40px;
+   }
+   
+      div.mmc_parameters_custom_section7 div.line {
+         height: 30px;
+      }
+   
+   div.mmc_parameters_custom_section8 {
+      position: absolute;
+      top: 38px;
+      left: 28px;
+   }
+
+   div.mmc_parameters_custom_section9 {
+      position: absolute;
+      top: 30px;
+   }
+
+   div.mmc_parameters_custom_section10 {
+      position: absolute;
+      top: 38px;
+   }
+
+   div.mmc_parameters_custom_section11 {
+      position: absolute;
+      top: 38px;
+      width: 100%;
+      text-align: center;
+   }
+
+      div.mmc_parameters_custom_section8 div.line {
+         height: 30px;
+      }
+
+      div.mmc_parameters_custom_section8 div.inputfield {
+         margin: -3px 10px 0 10px !important;
+      }
+
+   div.mmc_parameters_custom_subsection1 {
+      display: inline-block;
+      position: absolute;
+      left: 50px;
+      width: 100px;
+   }
+
+   div.mmc_parameters_custom_subsection2 {
+      margin-top: 17px;
+   }
+
+   div.mmc_parameters_custom_subsection3 {
+      margin-top: 5px;
+   }
+
+   div.mmc_parameters_custom_subsection4 {
+      margin-left: 20px
+   }
+
+   /* custom inputs */
+   div.mmc_parameters_custom_input2 {
+      vertical-align: top;
+      margin: -2px 0 0 3px;
+   }
+
+   input.mmc_parameters_custom_input3 {
+      margin: -2px 5px 0 15px !important;
+   }
+
+   div.mmc_parameters_custom_input4 {
+      margin-top: -3px;
+   }
+
+   div.mmc_parameters_custom_input5 {
+      margin-left: 24px;
+   }
+
+   /* custom labels */
+   label.mmc_parameters_custom_label1 {
+      padding: 4px 0 0 13px;
+   }
+
+   label.mmc_parameters_custom_label2 {
+      margin-right: 3px;
+   }
+
+   label.mmc_parameters_custom_label3 {
+      margin: 0 0 0 34px;
+   }
+
+   label.mmc_parameters_custom_label4 {
+      margin-left: 5px;
+   }
+
+   label.mmc_parameters_custom_label5 {
+      margin-top: 4px;
+   }
+
+   label.mmc_parameters_custom_label6 {
+      margin-left: 1px;
+   }
+
+   label.mmc_parameters_custom_label7 {
+      margin: 1px 0 0 5px;
+   }
+   
+   /* custom lines */
+   div.mmc_parameters_custom_line1 {
+      height: 15px;
+      padding-top: 6px;
+   }
