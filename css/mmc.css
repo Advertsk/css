@@ -79,9 +79,7 @@
     margin:0; padding: 1px 1px 0 1px;
 }
 
-<<<<<<< HEAD
-.module-mmc .content .mmcmenu ul.tabs li{
-=======
+
 
 .mmcoptions .viewport .overview .plastic{
    display: inline;
@@ -117,13 +115,12 @@
     background: linear-gradient(to bottom,  #efefef 1%,#efefef 51%,#bebebe 100%); /* W3C */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efefef', endColorstr='#bebebe',GradientType=0 ); /* IE6-9 */
 
-    
+    cursor: pointer;
    
 }
 
 .module-mmc .content .mmcmenu ul.tabs li,
-.mmcoptions .viewport .overview .always results label{
->>>>>>> 9caf28688aee1c24a16510668804496c38d1b5b5
+.mmcoptions .viewport .overview .always label{
 
 
     display: inline;
