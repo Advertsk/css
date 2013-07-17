@@ -1,6 +1,6 @@
 .module-mmc{
     background: #e9e9e9;
-    width: 470px;
+    width: 466px;
     min-height: 308px;
     position: relative;
     font-size: 10px;
@@ -35,9 +35,10 @@
 }
 .module-mmc .content .mmcoptions{
     float: left;
-    right: 3px;
+    right: 1px;
     position: relative;
     width: 230px;
+    background-color:#f9f9f9;
 }
 .module-mmc .mmcoptions .options{
     padding: 3px;
@@ -225,6 +226,7 @@ border:1px solid red;
   text-align: center;
   margin-right: 5px;
   padding: 1px;
+  background-color:white;
 }
 
 .module-mmc .input-wrap input{
