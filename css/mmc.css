@@ -34,11 +34,12 @@
     min-height: 300px;
 }
 .module-mmc .content .mmcoptions{
-    float: left;
     right: 1px;
     position: relative;
     width: 230px;
     background-color:#f9f9f9;
+    border: 1px solid #C9C9C9;
+    
 }
 .module-mmc .mmcoptions .options{
     padding: 3px;
@@ -78,10 +79,7 @@
     margin:0; padding: 1px 1px 0 1px;
 }
 
-.module-mmc .content .mmcmenu ul.tabs li,
-
-
-.mmcoptions .viewport .overview .always results label{
+.module-mmc .content .mmcmenu ul.tabs li{
 
 
     display: inline;
