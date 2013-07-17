@@ -77,7 +77,10 @@
     margin:0; padding: 1px 1px 0 1px;
 }
 
-.module-mmc .content .mmcmenu ul.tabs li{
+.module-mmc .content .mmcmenu ul.tabs li,
+
+
+.mmcoptions .viewport .overview fieldset label{
 
 
     display: inline;
