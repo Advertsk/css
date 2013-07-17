@@ -59,12 +59,18 @@
     margin-top: -5px;
     margin-bottom: 3px;
 }
-.module-mmc > .content  > .mmcoptions  fieldset > .options span{
+.module-mmc  .content   .mmcoptions  fieldset .options span{
     display: block;
     vertical-align: top;
     height: 20px;
 }
-.module-mmc > .content  > .mmcoptions  fieldset > .options label{
+
+.module-mmc .content  .mmcoptions  fieldset .options div{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.module-mmc .content  .mmcoptions  fieldset .options label{
     display: inline-block;
     vertical-align: middle;
 }
@@ -347,3 +353,6 @@ border:1px solid red;
 {
 background-color:#F9F9F9;
 }
+
+
+
